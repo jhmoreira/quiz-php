@@ -1,20 +1,6 @@
 <?php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'quiz');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-
-$options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES => false,
-];
-
-try{
-    $pdo = new PDO("mysql:host=". DB_HOST. ";charset= utf8mb4", DB_USER, DB_PASSWORD,$options);
-}catch(PDOException $e){
-    $pdo = NULL;
-}
-
-
+require_once __DIR__ . "/../resources/layout/header.php";
 ?>
+<h1>QUIZ PHP - Página Inicial</h1>
+<?php
+require_once __DIR__ . "/../resources/layout/footer.php";
