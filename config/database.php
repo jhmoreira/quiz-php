@@ -1,4 +1,5 @@
 <?php
+function getConnection(){
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'quiz');
 define('DB_USER', 'root');
@@ -11,10 +12,11 @@ $options = [
 ];
 
 try{
-    $pdo = new PDO("mysql:host=". DB_HOST. ";charset= utf8mb4", DB_USER, DB_PASSWORD,$options);
+    $pdo = new PDO("mysql:host=". DB_HOST. ";charset=utf8mb4", DB_USER, DB_PASSWORD,$options);
+    return $pdo;
 }catch(PDOException $e){
     $pdo = NULL;
 }
-
+}
 
 ?>
