@@ -46,6 +46,7 @@ try{
     correct_option ENUM ('A', 'B', 'C', 'D') NOT NULL,
     created_by INT UNSIGNED,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    difficulty ENUM ('easy', 'medium', 'hard') NOT NULL DEFAULT 'easy',
     FOREIGN KEY (category_id) REFERENCES categories(id),
     FOREIGN KEY (created_by) REFERENCES users(id)
     );
