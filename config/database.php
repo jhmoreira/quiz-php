@@ -12,7 +12,7 @@ $options = [
 ];
 
 try{
-    $pdo = new PDO("mysql:host=". DB_HOST. ";charset=utf8mb4", DB_USER, DB_PASSWORD,$options);
+    $pdo = new PDO("mysql:host=". DB_HOST. ";dbname=". DB_NAME . ";charset=utf8mb4", DB_USER, DB_PASSWORD,$options);
     return $pdo;
 }catch(PDOException $e){
     $pdo = NULL;
