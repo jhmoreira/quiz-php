@@ -36,8 +36,8 @@ $question = $questions[$current];
 ?>
 
 <div class="quiz-container">
-    <h2>Pergunta <?php echo $current +1?> de <?echo $totalQuestions;?></h2>
-    <p class="question-text"><?echo $question['question']?></p>
+    <h2>Pergunta <?php echo $current +1?> de <?php echo $totalQuestions;?></h2>
+    <p class="question-text"><?php echo $question['question']?></p>
 
     <form method="POST">
         <button class="option-btn" name="answer" value="A"><?php echo $question['option_a'];?></button>
